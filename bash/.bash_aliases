@@ -7,7 +7,6 @@
 
 # Custom defined aliases for bash
 alias python="python3"
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias rm='rm -i'
 
 # Custom settings
