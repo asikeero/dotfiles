@@ -9,6 +9,11 @@
 alias python="python3"
 alias rm='rm -i'
 
+# some more ls aliases
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
 # Custom settings
 # disable input hang when pressing Ctrl+s
 stty -ixon
@@ -40,3 +45,5 @@ git_acp(){
     git push
 }
 
+# some eyecandy
+neofetch
