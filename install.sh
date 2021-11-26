@@ -39,8 +39,8 @@ function install {
 
 # actions start here
 # check directory
-[[ $(basename $(pwd)) == ".dotfiles" ]] ||
-    recho "directory should be ~/.dotfiles/"
+[[ $(basename $(pwd)) == "dotfiles" ]] ||
+    recho "directory should be ~/dotfiles/"
 
 # update apt repos
 apt update
