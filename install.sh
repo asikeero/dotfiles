@@ -44,7 +44,6 @@ function install {
 
 # update apt repos
 apt update
-apt upgrade
 
 # check prerequisites
 check_prereq git
@@ -54,5 +53,7 @@ install stow
 install neofetch
 
 
+# run stow
+stow bash
 
 gecho "Install finished"
