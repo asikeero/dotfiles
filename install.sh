@@ -37,6 +37,12 @@ function install {
         (yecho "$1 not found, installing" && apt install $1 -y)
 }
 
+function create_link {
+    echo "Linking: $1 --> $2"
+    (ln -sf $1 $2 && gecho "success") ||
+        (recho "linking failed")
+}
+
 # actions start here
 # check directory
 [[ $(basename $(pwd)) == "dotfiles" ]] ||
@@ -49,11 +55,10 @@ apt update
 check_prereq git
 
 # install wanted tools
-install stow
 install neofetch
 
-
-# run stow
-stow bash
+# create needed symlinks
+create_link /home/eero/dotfiles/bash/.bashrc /home/eero/.bashrc
+create_link /home/eero/dotfiles/bash/.bash_aliases /home/eero/.bash_aliases
 
 gecho "Install finished"
