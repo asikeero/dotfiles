@@ -45,5 +45,8 @@ git_acp(){
     git push
 }
 
+# set env-variables
+export NLTK_DATA=/home/eero/.local/share/nltk_data
+
 # some eyecandy
 neofetch

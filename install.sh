@@ -61,4 +61,4 @@ install neofetch
 create_link /home/eero/dotfiles/bash/.bashrc /home/eero/.bashrc
 create_link /home/eero/dotfiles/bash/.bash_aliases /home/eero/.bash_aliases
 
-gecho "Install finished"
+gecho "Install finished!"
