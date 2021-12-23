@@ -54,11 +54,12 @@ apt update
 # check prerequisites
 check_prereq git
 
+
 # install wanted tools
 install neofetch
+install stow
 
-# create needed symlinks
-create_link /home/eero/dotfiles/bash/.bashrc /home/eero/.bashrc
-create_link /home/eero/dotfiles/bash/.bash_aliases /home/eero/.bash_aliases
+# create needed symlinks with stow
+stow --adapt *
 
 gecho "Install finished!"
