@@ -1,0 +1,13 @@
+# set zsh home directory
+export ZDOTDIR=$HOME/.config/zsh/
+
+# XDG paths
+export XDG_CONFIG_HOME=$HOME/.config
+export XDG_CACHE_HOME=$HOME/.cache
+export XDG_DATA_HOME=$HOME/.local/share
+
+# no breaking space
+setxkbmap -option nbsp:none
+# switch esc and caps lock
+setxkbmap -option caps:escape
+setxkbmap -option caps:swapescape
