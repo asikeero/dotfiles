@@ -1,0 +1,4 @@
+# aliases for zsh
+
+alias ls="ls -al --color"
+alias rm="rm -I"

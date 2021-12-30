@@ -54,12 +54,13 @@ apt update
 # check prerequisites
 check_prereq git
 
-
 # install wanted tools
 install neofetch
 install stow
+install zsh
+install tree
 
 # create needed symlinks with stow
-stow --adapt *
+stow --adopt */
 
 gecho "Install finished!"
