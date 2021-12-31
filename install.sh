@@ -57,8 +57,9 @@ check_prereq git
 # install wanted tools
 install neofetch
 install stow
+<<<<<<< HEAD
 
 # create needed symlinks with stow
-stow --adopt bash
+stow --adopt */
 
 gecho "Install finished!"
