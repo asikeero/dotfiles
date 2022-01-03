@@ -6,3 +6,4 @@ stty stop undef		# Disable ctrl-s to freeze terminal.
 setopt interactive_comments
 
 source $ZDOTDIR/.zsh_aliases
+neofetch

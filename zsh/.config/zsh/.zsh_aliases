@@ -3,3 +3,12 @@
 alias ll="ls -al --color"
 alias ls="ls --color"
 alias rm="rm -I"
+
+alias python="python3"
+
+# git add, commit and push
+git_acp(){
+    git add .
+    git commit -m $1
+    git push
+}

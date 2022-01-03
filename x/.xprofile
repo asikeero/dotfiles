@@ -8,6 +8,3 @@ export XDG_DATA_HOME=$HOME/.local/share
 
 # no breaking space
 setxkbmap -option nbsp:none
-# switch esc and caps lock
-setxkbmap -option caps:escape
-setxkbmap -option caps:swapescape

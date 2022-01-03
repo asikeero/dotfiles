@@ -69,7 +69,7 @@ set splitright
 let mapleader = " "
 
 " map 'jj' to Esc for fast closing of insert mode
-inoremap jj <esc>
+"inoremap jj <esc>
 
 " Move around visually (affects line wrapping)
 nnoremap j gj
@@ -80,16 +80,17 @@ nnoremap w W
 nnoremap b B
 
 " easier split navigations
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
+nnoremap <leader>j <C-W><C-J>
+nnoremap <leader>k <C-W><C-K>
+nnoremap <leader>l <C-W><C-L>
+nnoremap <leader>h <C-W><C-H>
 
 " Automatically closing braces when applied with a <CR>
 inoremap {<CR> {<CR>}<Esc>ko
 
 " Map NERDTreeToggle to ctrl -n
-noremap <C-N> :NERDTreeToggle<CR>
+noremap <leader>n :NERDTreeToggle<CR>
+let NERDTreeShowHidden=1
 
 " filetype-based syntax highlighting and indentations
 syntax enable
