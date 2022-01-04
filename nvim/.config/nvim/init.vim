@@ -114,6 +114,7 @@ endif
 
 call plug#begin()
 Plug 'neovim/nvim-lspconfig'
+Plug 'hrsh7th/nvim-cmp'
 Plug 'scrooloose/nerdtree'
 Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/vim-github-dashboard'
@@ -125,7 +126,7 @@ Plug 'bfrg/vim-cpp-modern'
 call plug#end()
 
 " for python syntax highlight
-let g:gruvbox_transparent_bg = 1
+"let g:gruvbox_transparent_bg = 1
 autocmd vimenter * ++nested colorscheme gruvbox
 set background=dark
 
@@ -137,3 +138,6 @@ nnoremap <leader>b :IndentLinesToggle<cr>
 
 " disable inserting comment sequence on newline after comment (eg. " or //)
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
+" LSP config
+lua require'lspconfig'.pylsp.setup{}
