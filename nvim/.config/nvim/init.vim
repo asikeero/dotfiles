@@ -36,7 +36,7 @@ let &t_te.="\<Esc>[0 q"
 set nowrap
 
 " set an undofile location and allow undofile
-set undodir=~/.vim/undodir
+set undodir=$XDG_DATA_HOME/nvim/undodir/
 set undofile
 
 " Ignore case when searching
@@ -111,8 +111,9 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
   silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
-call plug#begin('~/.vim/plugged')
 
+call plug#begin()
+Plug 'neovim/nvim-lspconfig'
 Plug 'scrooloose/nerdtree'
 Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/vim-github-dashboard'
@@ -121,7 +122,6 @@ Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-fugitive'
 Plug 'Yggdroot/indentLine'
 Plug 'bfrg/vim-cpp-modern'
-
 call plug#end()
 
 " for python syntax highlight

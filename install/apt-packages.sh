@@ -62,5 +62,6 @@ install neovim
 install zsh
 install tree
 install ranger
+install python3-pip
 
 
