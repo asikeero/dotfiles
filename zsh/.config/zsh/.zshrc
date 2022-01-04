@@ -6,4 +6,9 @@ stty stop undef		# Disable ctrl-s to freeze terminal.
 setopt interactive_comments
 
 source $ZDOTDIR/.zsh_aliases
-neofetch
+
+if [[ $FIRST_TERMINAL = "true" ]]
+then
+    neofetch
+    export FIRST_TERMINAL="false"
+fi

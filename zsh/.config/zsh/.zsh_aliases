@@ -6,9 +6,15 @@ alias rm="rm -I"
 
 alias python="python3"
 
+# xclip copy and paste
+alias copy="xclip -selection c"
+alias paste="xclip -selection c -o"
+
 # git add, commit and push
 git_acp(){
     git add .
     git commit -m $1
     git push
 }
+
+

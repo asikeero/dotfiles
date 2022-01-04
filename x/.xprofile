@@ -1,6 +1,9 @@
 # set zsh home directory
 export ZDOTDIR=$HOME/.config/zsh/
 
+# define if first terminal has been run
+export FIRST_TERMINAL=true
+
 # XDG paths
 export XDG_CONFIG_HOME=$HOME/.config
 export XDG_CACHE_HOME=$HOME/.cache
