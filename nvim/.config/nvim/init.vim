@@ -13,6 +13,7 @@ set showmatch
 set cursorline
 set splitbelow
 set splitright
+set termguicolors
 syntax enable
 filetype plugin indent on 
 
