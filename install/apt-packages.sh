@@ -58,7 +58,6 @@ check_prereq curl
 # install wanted tools
 install neofetch
 install stow
-install neovim
 install zsh
 install tree
 install ranger

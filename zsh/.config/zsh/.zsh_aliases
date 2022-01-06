@@ -5,6 +5,7 @@ alias ls="ls --color"
 alias rm="rm -I"
 
 alias python="python3"
+alias nvim="~/.local/bin/nvim.appimage"
 
 # xclip copy and paste
 alias copy="xclip -selection c"

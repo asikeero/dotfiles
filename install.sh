@@ -1,12 +1,11 @@
 #!/bin/bash
 
 # This is a bootstrapper for the install scripts inside install/
-sudo ./install/add-ppas.sh
-sudo ./install/apt-packages.sh
+./install/fonts-install.sh
+./install/kitty-install.sh 
+./install/nvim-install.sh
 
-source ./install/kitty-install.sh 
-
-stow --adopt */
+stow --adopt nvim wget x zsh 
 
 
 # set zsh as default shell
