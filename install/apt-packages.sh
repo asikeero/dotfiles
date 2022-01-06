@@ -61,6 +61,6 @@ install stow
 install zsh
 install tree
 install ranger
-install python3-pip
+which pip3 >/dev/null || install python3-pip
 
 
