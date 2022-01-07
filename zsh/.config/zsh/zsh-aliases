@@ -3,6 +3,9 @@
 alias ll="ls -al --color"
 alias ls="ls --color"
 alias rm="rm -I"
+alias grep="grep --color=auto"
+alias -- -="cd -"
+alias ...="cd ../.."
 
 alias python="python3"
 alias nvim="~/.local/bin/nvim.appimage"

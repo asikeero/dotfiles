@@ -4,6 +4,8 @@ PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magent
 setopt autocd		# Automatically cd into typed directory.
 setopt menucomplete
 setopt interactive_comments
+setopt correct_all
+
 unsetopt BEEP
 stty stop undef		# Disable ctrl-s to freeze terminal.
 
