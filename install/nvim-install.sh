@@ -5,10 +5,6 @@ then
     chmod u+x nvim.appimage
     mkdir -p ~/.local/bin
     mv nvim.appimage ~/.local/bin/
-    
-    # configure nvim
-    ./install/nvim-configure.sh
-
 else
     echo "nvim already installed"
 fi
