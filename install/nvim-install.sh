@@ -7,7 +7,7 @@ then
     mv nvim.appimage ~/.local/bin/
     
     # configure nvim
-    ./nvim-configure.sh
+    ./install/nvim-configure.sh
 
 else
     echo "nvim already installed"
