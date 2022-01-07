@@ -11,8 +11,15 @@ end
 
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
+  use 'neovim/nvim-lspconfig'
+  use 'williamboman/nvim-lsp-installer'
+  use 'burntsushi/ripgrep'
   use 'feline-nvim/feline.nvim'
   use 'morhetz/gruvbox'
+  use {
+      'nvim-treesitter/nvim-treesitter',
+      run = ':TSUpdate'
+  }
   use {
       'kyazdani42/nvim-tree.lua',
       requires = {
@@ -25,6 +32,12 @@ return require('packer').startup(function(use)
       'nvim-lua/plenary.nvim',
       'nvim-telescope/telescope-fzy-native.nvim'}
   }
+  -- autocompletion
+  use 'hrsh7th/nvim-cmp'
+  use 'hrsh7th/cmp-nvim-lsp'
+  use 'L3MON4D3/LuaSnip'
+  use 'saadparwaiz1/cmp_luasnip'
+  use 'onsails/lspkind-nvim'
 
   if packer_bootstrap then
     require('packer').sync()

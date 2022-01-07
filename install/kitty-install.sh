@@ -2,7 +2,8 @@
 is_installed=$(which kitty)
 if [ -z $is_installed ]
 then
-    curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
+    curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin \
+        launch=n
     # Create a symbolic link to add kitty to PATH (assuming ~/.local/bin is in your path
     ln -fs ~/.local/kitty.app/bin/kitty ~/.local/bin/
     # Place the kitty.desktop file somewhere it can be found by the OS
