@@ -11,6 +11,8 @@ alias nvim="~/.local/bin/nvim.appimage"
 alias copy="xclip -selection c"
 alias paste="xclip -selection c -o"
 
+alias gs="git status"
+
 # git add, commit and push
 git_acp(){
     git add .
