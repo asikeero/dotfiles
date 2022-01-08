@@ -11,11 +11,11 @@ end
 
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
+  use 'christianchiarulli/nvcode-color-schemes.vim'
   use 'neovim/nvim-lspconfig'
   use 'williamboman/nvim-lsp-installer'
   use 'burntsushi/ripgrep'
   use 'feline-nvim/feline.nvim'
-  use 'morhetz/gruvbox'
   use {
       'nvim-treesitter/nvim-treesitter',
       run = ':TSUpdate'
