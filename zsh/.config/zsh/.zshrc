@@ -9,6 +9,10 @@ setopt correct_all
 unsetopt BEEP
 stty stop undef		# Disable ctrl-s to freeze terminal.
 
+HISTFILE=$ZDOTDIR/.zsh_history
+HISTSIZE=1000
+SAVEHIST=1000
+
 # completions
 autoload -Uz compinit
 zstyle ':completion:*' menu select
