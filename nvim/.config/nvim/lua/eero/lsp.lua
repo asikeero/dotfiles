@@ -22,6 +22,12 @@ lsp_installer.on_server_ready(function(server)
         capabilities = capabilities,
         on_attach = on_attach,
     }
+
+    -- make sumneko lua not warn of global 'vim' missing
+    if server.name == "sumneko_lua" then
+      local sumneko_opts = require("eero.sumneko")
+      opts = vim.tbl_deep_extend("force", sumneko_opts, opts)
+    end
     server:setup(opts)
 end)
 

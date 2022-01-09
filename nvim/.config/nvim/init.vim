@@ -3,7 +3,7 @@ let mapleader = " "
 set number
 set relativenumber
 set expandtab
-set tabstop=4 shiftwidth=4
+set tabstop=2 shiftwidth=2
 set smarttab
 set autoindent
 set hidden
@@ -23,7 +23,6 @@ set mouse=a
 syntax enable
 filetype plugin indent on 
 
-
 " load plugins with packer inside lua
 " this is essentially a single entry point
 lua require('eero')
@@ -35,8 +34,11 @@ nnoremap <leader>k <C-W><C-K>
 nnoremap <leader>l <C-W><C-L>
 nnoremap <leader>h <C-W><C-H>
 
-" Automatically closing braces when applied with a <CR>
-inoremap {<CR> {<CR>}<Esc>ko
+" set tabs in python to be 4 spaces wide
+autocmd FileType python set tabstop=4 shiftwidth=4
+
+" disable entering comment symbol with newline after comment
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " set F9 to run python script, first line for normal mode, second for insert"
 autocmd FileType python map <buffer> <F9> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
@@ -48,8 +50,9 @@ autocmd FileType cpp imap <buffer> <F9> <esc>:w<CR>:exec '!g++ '.shellescape('%'
 
 let g:nvcode_termcolors=256
 colorscheme gruvbox
+
 " autoload packages when plugins.lua is modified
 augroup packer_user_config
   autocmd!
-  autocmd BufWritePost plugins.lua source <afile> | PackerCompile
+  autocmd BufWritePost plugins.lua source <afile> | PackerSync
 augroup end

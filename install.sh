@@ -4,6 +4,10 @@
 # This is a bootstrapper for the install scripts inside install/
 sudo ./install/apt-packages.sh
 
+# make sure directories exist 
+# to avoid creating symlinked directories
+mkdir -p $XDG_CONFIG_HOME/nvim $XDG_CONFIG_HOME/wget $XDG_CONFIG_HOME/zsh $XDG_CONFIG_HOME/kitty
+
 # first insert config files with stow
 stow --adopt nvim wget x zsh kitty
 

@@ -9,13 +9,30 @@ if not string.find(vim.o.runtimepath, rtp_addition) then
   vim.o.runtimepath = rtp_addition .. ',' .. vim.o.runtimepath
 end
 
+-- use protected call to not get error on first use
+local status_ok, packer = pcall(require, "packer")
+if not status_ok then
+    return
+end
+
+-- Have  packer use a popup window
+packer.init {
+    display = {
+        open_fn = function()
+            return require("packer.util").float {border = "rounded" }
+        end,
+    },
+}
+
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   use 'christianchiarulli/nvcode-color-schemes.vim'
+  use 'windwp/nvim-autopairs'
   use 'neovim/nvim-lspconfig'
   use 'williamboman/nvim-lsp-installer'
-  use 'burntsushi/ripgrep'
   use 'feline-nvim/feline.nvim'
+  use 'numToStr/Comment.nvim'
+  use 'akinsho/toggleterm.nvim'
   use {
       'nvim-treesitter/nvim-treesitter',
       run = ':TSUpdate'
@@ -30,7 +47,8 @@ return require('packer').startup(function(use)
     'nvim-telescope/telescope.nvim',
     requires = {
       'nvim-lua/plenary.nvim',
-      'nvim-telescope/telescope-fzy-native.nvim'}
+      'nvim-telescope/telescope-fzy-native.nvim',
+      'burntsushi/ripgrep'}
   }
   -- autocompletion
   use 'hrsh7th/nvim-cmp'
