@@ -34,6 +34,9 @@ nnoremap <leader>k <C-W><C-K>
 nnoremap <leader>l <C-W><C-L>
 nnoremap <leader>h <C-W><C-H>
 
+" mimic americal layout to input commands
+nnoremap ö :
+
 " set tabs in python to be 4 spaces wide
 autocmd FileType python set tabstop=4 shiftwidth=4
 
