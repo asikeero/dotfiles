@@ -10,6 +10,7 @@ set autoindent
 set hidden
 set nowrap
 set scrolloff=8
+set sidescrolloff=8
 set showmatch
 set incsearch
 set undofile
@@ -21,6 +22,7 @@ set ignorecase
 set smartcase
 set termguicolors
 set mouse=a
+set signcolumn=yes  " dont shift text around when warnings emerge
 syntax enable
 filetype plugin indent on 
 nnoremap Y y$
@@ -45,10 +47,10 @@ nnoremap <M-Up> :resize -1<CR>
 " moving text up and down
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
-inoremap <C-j> :m .+1<CR>==
-nnoremap <leader>j :m .+1<CR>==
-inoremap <C-k> :m .-2<CR>==
-nnoremap <leader>k :m .-2<CR>==
+inoremap <silent> <M-j> :m .+1<CR>==
+nnoremap <silent> <C-j> :m .+1<CR>==
+inoremap <silent> <M-k> :m .-2<CR>==
+nnoremap <silent> <C-k> :m .-2<CR>==
 
 " copy
 vnoremap <leader>y "+y

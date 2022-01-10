@@ -1,4 +1,9 @@
-require('telescope').setup {}
+require('telescope').setup {
+  defaults = {
+    file_ignore_patterns = {'%.pyc'},
+  },
+}
+
 require('telescope').load_extension('fzy_native')
 
 vim.cmd [[
