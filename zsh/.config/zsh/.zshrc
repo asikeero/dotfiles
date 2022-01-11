@@ -4,10 +4,9 @@ PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magent
 setopt autocd		# Automatically cd into typed directory.
 setopt menucomplete
 setopt interactive_comments
-setopt correct_all
-
 unsetopt BEEP
 stty stop undef		# Disable ctrl-s to freeze terminal.
+zle_highlight=('paste:none')  # dont highlight pasted text
 
 HISTFILE=$ZDOTDIR/.zsh_history
 HISTSIZE=1000
@@ -43,3 +42,14 @@ fi
 # nvm 
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
+
+# pyenv (env variables are set in .profile)
+if type "$pyenv" > /dev/null; then
+  eval "$(pyenv init -)"
+fi
+
+# pyenv virtualenv (allows automatic activation of venvs)
+if type "$pyenv virtualenv" > /dev/null; then
+  eval "$(pyenv virtualenv-init -)"
+fi
