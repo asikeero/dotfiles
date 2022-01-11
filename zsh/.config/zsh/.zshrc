@@ -13,6 +13,7 @@ HISTSIZE=1000
 SAVEHIST=1000
 
 # completions
+fpath+=$ZDOTDIR/.zfunc
 autoload -Uz compinit
 zstyle ':completion:*' menu select
 zmodload zsh/complist

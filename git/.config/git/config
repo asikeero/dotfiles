@@ -1,5 +1,3 @@
 [user]
 	name = asikeero
 	email = 60272147+asikeero@users.noreply.github.com
-[core]
-	excludesfile = /home/eero/.config/git/ignore
