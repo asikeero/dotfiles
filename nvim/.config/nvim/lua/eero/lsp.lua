@@ -24,6 +24,16 @@ local on_attach = function(client, bufnr)
     buf_set_keymap('n', '<space>q', '<cmd>lua vim.diagnostic.setloclist()<CR>', opts)
     buf_set_keymap('n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
 
+    local signs = {
+      { name = "DiagnosticSignError", text = "" },
+      { name = "DiagnosticSignWarn", text = "" },
+      { name = "DiagnosticSignHint", text = "" },
+      { name = "DiagnosticSignInfo", text = "" },
+    }
+
+    for _, sign in ipairs(signs) do
+      vim.fn.sign_define(sign.name, { texthl = sign.name, text = sign.text, numhl = "" })
+    end
 end
 
 -- another function for lsp servers
