@@ -46,11 +46,11 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 
 
 # pyenv (env variables are set in .profile)
-if type "$pyenv" > /dev/null; then
+if command -v pyenv > /dev/null; then
   eval "$(pyenv init -)"
 fi
 
 # pyenv virtualenv (allows automatic activation of venvs)
-if type "$pyenv virtualenv" > /dev/null; then
+if command -v pyenv virtualenv > /dev/null; then
   eval "$(pyenv virtualenv-init -)"
 fi
