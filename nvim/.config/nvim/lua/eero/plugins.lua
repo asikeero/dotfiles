@@ -31,6 +31,7 @@ return require('packer').startup(function(use)
   use 'neovim/nvim-lspconfig'
   use 'williamboman/nvim-lsp-installer'
   use 'feline-nvim/feline.nvim'
+  use 'rafamadriz/friendly-snippets'
   use 'numToStr/Comment.nvim'
   use 'akinsho/toggleterm.nvim'
   use {
@@ -56,6 +57,12 @@ return require('packer').startup(function(use)
   use 'L3MON4D3/LuaSnip'
   use 'saadparwaiz1/cmp_luasnip'
   use 'onsails/lspkind-nvim'
+
+  -- debug
+  use 'mfussenegger/nvim-dap'
+  use 'nvim-telescope/telescope-dap.nvim'
+  use 'theHamsta/nvim-dap-virtual-text'
+  use 'rcarriga/nvim-dap-ui'
 
   if packer_bootstrap then
     require('packer').sync()

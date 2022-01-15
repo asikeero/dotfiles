@@ -99,3 +99,6 @@ autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_seq_sync()
 
 " close tags
 autocmd FileType javascript inoremap <buffer> <C-s> <esc>yiwi<lt><esc>ea></><esc>hpF>a
+
+" python settings
+let g:python3_host_prog = '/home/eero/.local/pyenv/versions/neovim/bin/python'

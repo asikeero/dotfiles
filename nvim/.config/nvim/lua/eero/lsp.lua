@@ -24,21 +24,43 @@ local on_attach = function(client, bufnr)
     buf_set_keymap('n', '<space>q', '<cmd>lua vim.diagnostic.setloclist()<CR>', opts)
     buf_set_keymap('n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
 
+    -- pretty signs in the left column
     local signs = {
       { name = "DiagnosticSignError", text = "" },
       { name = "DiagnosticSignWarn", text = "" },
       { name = "DiagnosticSignHint", text = "" },
       { name = "DiagnosticSignInfo", text = "" },
     }
-
     for _, sign in ipairs(signs) do
       vim.fn.sign_define(sign.name, { texthl = sign.name, text = sign.text, numhl = "" })
     end
+
+    -- some configuration
+    vim.diagnostic.config({
+      virtual_text = false,
+      signs = {
+        active = signs,
+      },
+      update_in_insert = true,
+      underline = true,
+      float = {
+        focusable = false,
+        style = "minimal",
+        border = "rounded",
+        source = "always",
+        header = "",
+        prefix = "",
+      },
+    })
 end
+
+
 
 -- another function for lsp servers
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
+
+
 
 -- setup from 'lsp-installer'
 lsp_installer.on_server_ready(function(server)
@@ -56,10 +78,12 @@ lsp_installer.on_server_ready(function(server)
 end)
 
 
+
 -- Autocompletions
 local cmp = require('cmp')
 local lspkind = require('lspkind')
 local luasnip = require('luasnip')
+require("luasnip.loaders.from_vscode").lazy_load()  -- load snipets from friendly-snippets
 
 vim.o.completeopt = 'menuone,noselect'
 
