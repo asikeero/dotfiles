@@ -41,7 +41,7 @@ local on_attach = function(client, bufnr)
       signs = {
         active = signs,
       },
-      update_in_insert = true,
+      update_in_insert = false,
       underline = true,
       float = {
         focusable = false,
