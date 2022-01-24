@@ -36,7 +36,7 @@ dap.configurations.python = {
 
 -- "extensions"
 require('telescope').load_extension('dap')
-vim.cmd 'g:dap_virtual_text = v:true'
+require('nvim-dap-virtual-text').setup()
 require('dapui').setup()
 
 -- custom signs

@@ -72,7 +72,7 @@ vnoremap ö :
 autocmd FileType python set tabstop=4 shiftwidth=4
 
 " disable entering comment symbol with newline after comment
-autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+"autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " set F9 to run python script, first line for normal mode, second for insert"
 autocmd FileType python map <buffer> <F9> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>

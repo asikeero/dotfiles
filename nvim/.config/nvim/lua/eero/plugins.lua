@@ -64,6 +64,8 @@ return require('packer').startup(function(use)
   use 'theHamsta/nvim-dap-virtual-text'
   use 'rcarriga/nvim-dap-ui'
 
+  use 'lewis6991/gitsigns.nvim'
+
   if packer_bootstrap then
     require('packer').sync()
   end
