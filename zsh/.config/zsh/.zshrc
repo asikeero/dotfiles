@@ -33,6 +33,7 @@ zsh_add_file "zsh-vim-mode"
 # add plugins
 zsh_add_plugin "zsh-users/zsh-autosuggestions"
 zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
+zsh_add_plugin "agkozak/zsh-z"
 
 if [[ $FIRST_TERMINAL = "true" ]]
 then
