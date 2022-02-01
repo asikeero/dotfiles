@@ -6,6 +6,7 @@ alias rm="rm -I"
 alias grep="grep --color=auto"
 alias -- -="cd -"
 alias ...="cd ../.."
+alias ranger=". ranger"
 
 alias python="python3"
 alias nvim="~/.local/bin/nvim.appimage"
@@ -15,6 +16,8 @@ alias copy="xclip -selection c"
 alias paste="xclip -selection c -o"
 
 alias gs="git status"
+
+
 
 # git add, commit and push
 git_acp(){
