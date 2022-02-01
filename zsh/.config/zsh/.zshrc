@@ -55,3 +55,11 @@ fi
 if command -v pyenv virtualenv > /dev/null; then
   eval "$(pyenv virtualenv-init -)"
 fi
+
+# zsh-z datafile location, create if not there
+location=$HOME/.local/share/zshz/z-data
+if [[ ! -f "$location" ]]; then
+  mkdir $HOME/.local/share/zshz
+  touch $location
+fi
+export ZSHZ_DATA="$location"
