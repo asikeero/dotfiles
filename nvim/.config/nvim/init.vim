@@ -95,7 +95,7 @@ augroup packer_user_config
 augroup end
 
 " run lsp format when file is saved
-autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_seq_sync()
+"autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_seq_sync()
 
 " close tags
 autocmd FileType javascript inoremap <buffer> <C-s> <esc>yiwi<lt><esc>ea></><esc>hpF>a
